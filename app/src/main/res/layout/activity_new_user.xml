@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewUser"
+    android:background="@drawable/adimage">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New Account"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#6236AF"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="90dp"/>
+
+    <EditText
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="32dp"
+        android:hint="Name"
+        android:textColorHint="#F7666D70"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:inputType="text"
+        android:textColor="#6236AF"
+        android:background="@drawable/edittext_rounded_corners_border"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintStart_toStartOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="#6236AF"
+        android:hint="E-mail ID"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textColorHint="#F7666D70"
+        android:inputType="textEmailAddress"
+        android:background="@drawable/edittext_rounded_corners_border"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/name" />
+
+    <EditText
+        android:id="@+id/userName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="#6236AF"
+        android:hint="User Name"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textColorHint="#F7666D70"
+        android:inputType="text"
+        android:background="@drawable/edittext_rounded_corners_border"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/email" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="32dp"
+        android:textColor="#6236AF"
+        android:hint="Password"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:textColorHint="#F7666D70"
+        android:inputType="textPassword"
+        android:background="@drawable/edittext_rounded_corners_border"
+        android:padding="@dimen/_10sdp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/userName" />
+    <ImageView
+        android:id="@+id/hideOrShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/visibility_off"
+        app:layout_constraintTop_toTopOf="@id/password"
+        app:layout_constraintBottom_toBottomOf="@id/password"
+        app:layout_constraintEnd_toEndOf="@id/password"
+        android:layout_marginEnd="12dp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="50dp"
+        android:background="@drawable/button_rounded_corners_border"
+        android:text="Create"
+        android:textAllCaps="false"
+        android:textColor="#fff"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <TextView
+        android:id="@+id/eUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account?"
+        android:textSize="16sp"
+        android:textColor="#F7666D70"
+        app:layout_constraintTop_toBottomOf="@id/create"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"/>
+    <TextView
+        android:id="@+id/exUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sign_in"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#714DB1"
+        app:layout_constraintTop_toBottomOf="@id/create"
+       app:layout_constraintStart_toEndOf="@id/eUser"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="4dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
